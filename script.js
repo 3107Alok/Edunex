@@ -1202,8 +1202,68 @@ async function uploadSyllabus() {
   reader.readAsDataURL(file);
 }
 
+// -------- INTERSECTION OBSERVER FOR FADE-IN ANIMATIONS --------
+window.observeElements = function() {
+  const elements = document.querySelectorAll('.fade-in-section');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -20px 0px'
+    });
+    elements.forEach((el) => {
+      observer.observe(el);
+    });
+  } else {
+    elements.forEach((el) => el.classList.add('is-visible'));
+  }
+};
+
+// -------- TYPEWRITER EFFECT FOR WELCOME BANNER --------
+function initTypewriter() {
+  const words = ["study materials 📚", "unit-wise notes 📄", "previous year papers 📂", "AI syllabus verification 🤖"];
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  const textEl = document.getElementById("typewriter-text");
+  
+  if (!textEl) return;
+
+  function type() {
+    const currentWord = words[wordIndex];
+    if (isDeleting) {
+      textEl.innerText = currentWord.substring(0, charIndex - 1);
+      charIndex--;
+    } else {
+      textEl.innerText = currentWord.substring(0, charIndex + 1);
+      charIndex++;
+    }
+
+    let typeSpeed = isDeleting ? 40 : 80;
+
+    if (!isDeleting && charIndex === currentWord.length) {
+      typeSpeed = 1500; // Pause at end of word
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+      typeSpeed = 500; // Pause before typing new word
+    }
+
+    setTimeout(type, typeSpeed);
+  }
+  
+  type();
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(window.observeElements, 100);
+  initTypewriter();
   
   const pyqBtn = document.getElementById("uploadPYQBtn");
   if (pyqBtn) {
