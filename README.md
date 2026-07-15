@@ -12,8 +12,12 @@ EduNex is a premium, high-performance study resources share portal designed with
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: Standard HTML5, Vanilla CSS3 (Glassmorphism & animations), Vanilla JavaScript (Intersection Observer, typewriters).
-- **Backend & Services**: Amazon Cognito, AWS API Gateway, AWS Lambda, Amazon S3.
+As shown in the stack bar, the project utilizes:
+
+- **Frontend Ecosystem**: React.js, TypeScript, Tailwind CSS, HTML5, Vanilla CSS, Vanilla JavaScript
+- **Backend & APIs**: Node.js, Express.js
+- **Cloud & Auth**: AWS Cognito, Amazon S3
+- **Database**: MongoDB
 
 ## 🚀 Running Locally
 
