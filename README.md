@@ -1,137 +1,24 @@
-# 📚 EduNex – Notes Sharing Platform
+# EduNex 📚✨
 
-EduNex is a modern **Notes Sharing Web Application** designed for students to upload, explore, and manage academic resources like notes, PYQs, and syllabus — all in one place.
+EduNex is a premium, high-performance study resources share portal designed with a state-of-the-art **Apple/Linear style dark aesthetic**. It features secure authentication, AI-driven syllabus validation, structured unit-wise note sharing, and previous year question paper banks.
 
-It includes **AI-based validation**, **admin approval system**, and a **clean UI with smooth animations**.
+## ✨ Premium Features
 
----
-
-## 🚀 Features
-
-### 🔐 Authentication
-
-* Secure login/signup using **AWS Cognito**
-* Token-based authentication system
-* Role-based access (User / Admin)
-
----
-
-### 📄 Notes Management
-
-* Upload notes (Typed / Handwritten)
-* Organized by:
-
-  * Year → Subject → Unit
-* Auto file naming & cleaning
-* AI-based validation before approval
-* Preview & download support
-
----
-
-### 🤖 AI Integration
-
-* AI checks if uploaded notes match syllabus
-* Gives score (out of 10)
-* Rejects irrelevant uploads
-
----
-
-### 🛡️ Admin Panel
-
-* View pending uploads
-* Approve / Reject notes
-* Add comments
-* Delete notes
-
----
-
-### 📘 Syllabus System
-
-* Upload syllabus per subject
-* Automatically linked with notes
-* Displayed inside UI
-
----
-
-### 📚 PYQ Section
-
-* Upload Previous Year Questions
-* Filter by:
-
-  * Subject Code
-  * Exam Type (AKTU / MSE / ESE)
-* Preview & download support
-
----
-
-### 🎨 UI/UX
-
-* Responsive design
-* Dark theme with glassmorphism
-* Smooth animations
-* Toast notifications
-* Card-based layout
-
----
+- **Apple/Linear Glassmorphic UI**: Sleek dark mode layout with glowing gradients, soft purple accent rules, typewriter headings, and breathing status indicators.
+- **AI-Powered Syllabus Verification**: Automatically inspects uploaded notes against the syllabus unit constraints in real-time with progress bar indicators.
+- **Flexible Academic Categories**: Browse materials, syllabi, and question banks (AKTU, MSE, ESE, QB) sorted by academic years.
+- **Robust Cognito Auth Integration**: Secure session validation and role management for regular students and administrators.
+- **Administrative Control**: Direct approve/reject workflows for pending study materials.
 
 ## 🛠️ Tech Stack
 
-### Frontend
+- **Frontend**: Standard HTML5, Vanilla CSS3 (Glassmorphism & animations), Vanilla JavaScript (Intersection Observer, typewriters).
+- **Backend & Services**: Amazon Cognito, AWS API Gateway, AWS Lambda, Amazon S3.
 
-* HTML, CSS, JavaScript
+## 🚀 Running Locally
 
-### Backend (AWS)
-
-* AWS Lambda
-* API Gateway
-* DynamoDB
-* S3
-
-### Authentication
-
-* AWS Cognito
-
----
-
-## 📂 Project Structure
-
-```
-EduNex/
-│── index.html
-│── style.css
-│── script.js
-│── README.md
-```
-
----
-
-## ⚙️ How It Works
-
-1. User logs in via Cognito
-2. Uploads notes / PYQs / syllabus
-3. File goes to backend (Lambda + S3)
-4. AI evaluates content
-5. Admin approves/rejects
-6. Approved notes become visible
-
----
-
-## 👨‍💻 Contributors
-
-* Alok Singh
-* Amit Kumar
-
----
-
-## 📌 Future Improvements
-
-* Search functionality
-* Rating system
-* Comments/discussion
-* Mobile app
-
----
-
-## 📜 License
-
-This project is for educational purposes.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/3107Alok/Edunex.git
+   ```
+2. Open `index.html` in your browser (or use Live Server).
